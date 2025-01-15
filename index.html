@@ -9,15 +9,26 @@
     body {
       margin: 0;
       position: relative;
+      font-family: Arial, sans-serif;
     }
     .image-overlay {
       position: absolute;
       top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
+      right: 10px;
       z-index: 10;
-      width: 50%; /* Image size reduced by 50% */
-      max-width: 300px; /* Optional: Prevent image from being too large on larger screens */
+      width: 50%; /* Adjust image size */
+      max-width: 150px; /* Limit maximum size */
+    }
+    .footer-text {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 10;
+      color: #fff;
+      font-size: 14px;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      padding: 5px 10px;
+      border-radius: 5px;
     }
     model-viewer {
       width: 100%;
@@ -28,6 +39,9 @@
 <body>
   <!-- Image Overlay -->
   <img src="image.png" alt="Overlay Image" class="image-overlay">
+
+  <!-- Footer Text -->
+  <div class="footer-text">© Manobal Studios Pvt Ltd.</div>
 
   <!-- 3D Model Viewer -->
   <model-viewer 
