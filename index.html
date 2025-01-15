@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Lungs Viewer</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      position: relative;
+    }
+    .image-overlay {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      max-width: 90%;
+    }
+    model-viewer {
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <!-- Image Overlay -->
+  <img src="image.png" alt="Overlay Image" class="image-overlay">
+
+  <!-- 3D Model Viewer -->
+  <model-viewer 
+    src="https://cdn.glitch.me/16112d14-3ddb-40f3-88b5-ffe7f74d4267/lungs.glb?v=1736323346405" 
+    ios-src="https://cdn.glitch.me/16112d14-3ddb-40f3-88b5-ffe7f74d4267/lungs.usdz?v=1736323372348"
+    ar 
+    ar-modes="webxr scene-viewer quick-look" 
+    camera-controls 
+    autoplay 
+    animation-name="default" 
+    exposure="1">
+  </model-viewer>
+</body>
+</html>
