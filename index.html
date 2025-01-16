@@ -22,11 +22,12 @@
     }
     .bottom-image {
       position: absolute;
-      bottom: 10px;
-      left: 10px;
+      bottom: 10%; /* Use percentage for responsive positioning */
+      left: 5%; /* Use percentage for responsive positioning */
       z-index: 10;
-      width: 50px; /* Set size for the bottom image */
-      height: auto;
+      width: 20vw; /* Make size responsive to screen width */
+      max-width: 120px; /* Prevent the image from being too large */
+      height: auto; /* Keep aspect ratio */
     }
     model-viewer {
       width: 100%;
